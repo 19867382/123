@@ -1,0 +1,25 @@
+package task;
+
+import java.util.*;
+
+public class Task {
+ public int maxSubSum(List<Integer> list) {
+  int sum = 0;
+  int ans = 0;
+  for(int x : list) {
+   sum = Math.max(0, sum + x);
+   ans = Math.max(ans, sum);
+  }
+  return ans;
+ }
+ 
+ public static void main(String[] args) {
+  List<Integer> list = new ArrayList<>();
+  Scanner scanner = new Scanner(System.in);
+  System.out.println("输入数字：");
+  while(scanner.hasNextInt()) {
+   list.add(scanner.nextInt());
+  }
+  System.out.println("最大子序列和：" + new Task().maxSubSum(list));
+ }
+}
