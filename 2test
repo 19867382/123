@@ -1,0 +1,18 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import java.util.*;
+
+class TaskTest {
+
+ @Test
+ void testMaxSubSum() {
+  assertEquals(3, new Task().maxSubSum(new ArrayList<Integer>(Arrays.asList(3, -4))));
+  assertEquals(0, new Task().maxSubSum(new ArrayList<Integer>(Arrays.asList(-1))));
+  assertEquals(3, new Task().maxSubSum(new ArrayList<Integer>(Arrays.asList(3, -4, 2)) ));
+  assertEquals(7, new Task().maxSubSum(new ArrayList<Integer>(Arrays.asList(3, 4))));
+  //fail("Not yet implemented");
+ }
+
+}
